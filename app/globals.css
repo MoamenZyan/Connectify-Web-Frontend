@@ -1,42 +1,32 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  --main-color: #24a38e;
+  --dark-color: #311579;
+  --bright-color:#5966ca;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 10px;
+  background: 
+    url("https://www.transparenttextures.com/patterns/brushed-alum.png"),
+    linear-gradient(150deg, var(--dark-color) 10%, var(--bright-color) 35%);
+  background-blend-mode: multiply;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.mono-text {
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.sans-text {
+  font-family: var(--font-geist-sans), sans-serif;
 }
 
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+  box-sizing: border-box;
 }
